@@ -4,10 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charser="UFT-8">
-    <title>GS|Portfolio </title>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <title>GS | Portfolio </title>
+    <script src="https://kit.fontawesome.com/90f912aa64.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,12 +14,12 @@
         <a href="#" class="logo">Portfolio</a>
         <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu">
-            <li><a href="#home" onclick="toggleMenu();"></a>>Home</a></li>
-            <li><a href="#about" onclick="toggleMenu();"></a>>About</a></li>
-            <li><a href="#services" onclick="toggleMenu();"></a>>Services</a></li>
-            <li><a href="#work" onclick="toggleMenu();"></a>>Work</a></li>
-            <li><a href="#testimonial" onclick="toggleMenu();"></a>>Testimonial</a></li>
-            <li><a href="#contact" onclick="toggleMenu();"></a>>Contact</a></li>
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+            <li><a href="#testimonial" onclick="toggleMenu();">Testimonial</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
     <section class="banner" id="home">
@@ -45,43 +43,44 @@
                     placeat, aut quisquam minima eveniet omnis qui quae?</p>
             </div>
             <div class="w50">
-                <img src="https://www.enter.co/wp-content/uploads/2020/12/Programacion-codigo-768x432.jpg" class="img">
+                <img src="images/workspace.jpg" class="img">
             </div>
         </div>
     </section>
     <section class="services" id="services">
         <div class="heading white">
-            <h2>Services</h2>
+            <h2>My services</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="content">
             <div class="servicesBx">
                 <img src="">
-                <h2>Web Design</h2>
+                <h2>javascript</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cupiditate est atque aliquid a
                     ducimus itaque sapiente facere deserunt</p>
             </div>
             <div class="servicesBx">
                 <img src="">
-                <h2>Web Design</h2>
+                <h2>Web Dev</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cupiditate est atque aliquid a
                     ducimus itaque sapiente facere deserunt</p>
             </div>
             <div class="servicesBx">
                 <img src="">
-                <h2>Web Design</h2>
+                <h2>Web Dev</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cupiditate est atque aliquid a
                     ducimus itaque sapiente facere deserunt</p>
             </div>
             <div class="servicesBx">
                 <img src="">
-                <h2>Web Design</h2>
+                <h2>Web Dev</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cupiditate est atque aliquid a
                     ducimus itaque sapiente facere deserunt</p>
             </div>
             <div class="servicesBx">
                 <img src="">
-                <h2>Web Design</h2>
+                <h2>CSS</h2>
+                <img src="logos/css3.eps"/>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cupiditate est atque aliquid a
                     ducimus itaque sapiente facere deserunt</p>
             </div>
@@ -144,57 +143,37 @@
                 <h3>Contact Info</h3>
                 <div class="contactInfoBx">
                     <div class="box">
-                        <div class="icon">
-                            X
-                            <!-- <i class="fa fa-map-marker"></i> -->
+                        <div class="text">
+                            <h3><i class="fab fa-github"></i> GitHub </h3>
+                            <p>calle falsa 123</p>
                         </div>
-                        <div class="Text">
-                            <h3>Address</h3>
-                            <p>calle falsa 123, <br>Berlin, <br>11111</p>
                         </div>
                         <div class="box">
-                            <div class="icon">X</div>
-                            <div class="Text">
-                                <h3>Linkedin</h3>
+                            <div class="text">
+                                <h3><i class="fab fa-linkedin"></i> Linkedin</i></h3>
                                 <p>calle falsa 123</p>
                             </div>
                         </div>
                         <div class="box">
-                            <div class="icon">
-                                X
-                                <!-- <i class="fa fa-envelope-o"></i> -->
-                            </div>
-                            <div class="Text">
-                                <h3>Email</h3>
+                            <div class="text">
+                                <h3><i class="far fa-envelope"></i> Email </i></h3>
                                 <p>calle falsa 123</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="formBx">
-                    <form>
-                        <h3>Message Me</h3>
-                        <input type="text" name="" placeholder="Full Name">
-                        <input type="email" name="" placeholder="Email">
-                        <textarea placeholder="Your Message"></textarea>
-                        <input type="submit" value="Send">
-                    </form>
-                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Message Me</h3>
+                    <input type="text" name="" placeholder="Full Name">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
     </section>
     <div class="greeting">Have a nice day!</div>
-    <script type="text/javascript">
-        window.addEventListener('scroll', function () {
-            var header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0)
-        })
-        function toggleMenu() {
-            var menuToggle = document.querySelector('.toggle');
-            var menu = document.querySelector('.menu');
-            menuToggle.classList.toggle('active');
-            menu.classList.toggle('active');
-
-        }
-    </script>
+    <script src="functions.js"></script>
 </body>
-
 </html>
