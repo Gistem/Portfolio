@@ -142,6 +142,61 @@ img {
   text-align: center;
   transition: 0.5s;
 }
+.services .content .stackBx {
+  padding: 40px 20px;
+  background: #222;
+  color: #fff;
+  max-width: 800px;
+  margin: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+.services .content .stackBx ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+}
+.services .content .stackBx ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 9px rgba(48, 46, 46, 0.568);
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.services .content .stackBx ul li:hover {
+  transform: translateY(-15px);
+}
+.services .content .stackBx ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+.services .content .stackBx ul li:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+.services .content .stackBx ul li img {
+  width: 3em;
+  padding-bottom: 10px;
+}
 .services .content .servicesBx:hover {
   background: #2196f3;
 }
@@ -279,6 +334,68 @@ img {
   padding: 10px;
 }
 
+.cd-transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.cd-transition-layer .bg-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-2%);
+  transform: translateY(-50%) translateX(-2%);
+  height: 100%;
+  /* the sprite is composed of 25 frames */
+  width: 2500%;
+  background: url(ink.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.cd-transition-layer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cd-transition-layer.opening .bg-layer {
+  animation: cd-sequence 1s steps(24);
+  animation-fill-mode: forwards;
+}
+
+.cd-transition-layer.closing .bg-layer {
+  animation: cd-sequence-reverse 1s steps(24);
+  animation-fill-mode: forwards;
+}
+
+.no-cssanimations .cd-transition-layer {
+  display: none;
+}
+
+@keyframes cd-sequence {
+  0% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+}
+
+@keyframes cd-sequence-reverse {
+  0% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+}
+
 /* Trying responsive for 1st time */
 @media (max-width: 991px) {
   header,
@@ -361,6 +478,9 @@ img {
   .services .content .servicesBx {
     margin: 10px;
   }
+  .services .content .stackBx {
+    margin: 10px;
+  }
   .work .content .workBx {
     width: 100%;
     padding: 10px;
@@ -378,7 +498,11 @@ img {
     margin: 20px 0;
   }
 }
-
+@media (max-width: 835px) {
+  .services .content .stackBx {
+    max-width: 340px;
+  }
+}
 @media (max-width: 600px) {
   header,
   header.sticky {
