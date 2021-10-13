@@ -1,10 +1,21 @@
 window.addEventListener("scroll", function () {
-  var header = document.querySelector("header");
+  const header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 function toggleMenu() {
-  var menuToggle = document.querySelector(".toggle");
-  var menu = document.querySelector(".menu");
+  const menuToggle = document.querySelector(".toggle");
+  const menu = document.querySelector(".menu");
   menuToggle.classList.toggle("active");
   menu.classList.toggle("active");
 }
+const open = document.getElementById("open");
+const modal = document.getElementById("modal");
+const close = document.getElementById("close");
+
+open.addEventListener("click", () => {
+  modal.classList.add("popup");
+});
+
+close.addEventListener("click", () => {
+  modal.classList.remove("popup");
+});

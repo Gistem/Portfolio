@@ -24,6 +24,7 @@ section {
   color: #fff;
   font-weight: 500;
   line-height: 1.5em;
+  text-shadow: 0 2px 2px #444;
 }
 .banner h2 span {
   font-size: 1.5em;
@@ -33,6 +34,7 @@ section {
   font-size: 1.5em;
   color: #fff;
   font-weight: 500;
+  text-shadow: 0 2px 8px #444;
 }
 .btn {
   position: relative;
@@ -46,6 +48,12 @@ section {
   text-decoration: none;
   letter-spacing: 2px;
   font-weight: 500;
+  transition: 1s;
+}
+.btn:hover {
+  transition: 1s;
+  background: #fff;
+  color: #222;
 }
 header {
   position: fixed;
@@ -90,9 +98,32 @@ header ul li a {
   margin: 0 15px;
   color: #fff;
   text-decoration: none;
+  text-shadow: 0 2px 2px #444;
+}
+
+header ul li a::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: rgba(105, 197, 250, 0.295);
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+header ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 header.sticky ul li a {
   color: #111;
+  text-shadow: none;
 }
 .heading {
   width: 100%;
@@ -175,6 +206,56 @@ img {
   backdrop-filter: blur(10px);
   transition: 0.5s;
   overflow: hidden;
+}
+.wavy div {
+  display: inline-block;
+  animation: wave-text 1s ease-in-out infinite;
+}
+.wavy {
+  div:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  div:nth-of-type(2) {
+    animation-delay: 0.1s;
+  }
+  div:nth-of-type(3) {
+    animation-delay: 0.2s;
+  }
+  div:nth-of-type(4) {
+    animation-delay: 0.3s;
+  }
+  div:nth-of-type(5) {
+    animation-delay: 0.4s;
+  }
+  div:nth-of-type(6) {
+    animation-delay: 0.5s;
+  }
+  div:nth-of-type(7) {
+    animation-delay: 0.6s;
+  }
+  div:nth-of-type(8) {
+    animation-delay: 0.7s;
+  }
+  div:nth-of-type(9) {
+    animation-delay: 0.8s;
+  }
+  div:nth-of-type(10) {
+    animation-delay: 0.9s;
+  }
+  div:nth-of-type(11) {
+    animation-delay: 1s;
+  }
+}
+@keyframes wavy {
+  00% {
+    transform: translateY(0em);
+  }
+  60% {
+    transform: translateY(-0.6em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
 }
 .services .content .stackBx ul li:hover {
   transform: translateY(-15px);
