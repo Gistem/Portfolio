@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gistem/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gistem/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Gistem/Portfolio#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
