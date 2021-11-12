@@ -9,6 +9,7 @@
 
 section {
   padding: 100px;
+  min-height: 100vh;
 }
 
 .banner {
@@ -211,8 +212,11 @@ img {
   overflow: hidden;
 }
 .animatedLine p {
-  margin: 10px;
-  animation: animatedLine 2.5s ease-in-out infinite;
+  margin: none;
+  border: none;
+  padding: none;
+  font-weight: 100%;
+  animation: animatedLine 3s ease-in-out infinite;
 }
 .animatedLine p:nth-of-type(1) {
   animation-delay: 0s;
@@ -245,34 +249,34 @@ img {
   animation-delay: 0.9s;
 }
 .animatedLine p:nth-of-type(11) {
-  animation-delay: 1s;
+  animation-delay: 0.9s;
 }
 .animatedLine p:nth-of-type(12) {
-  animation-delay: 1.1s;
+  animation-delay: 0.8s;
 }
 .animatedLine p:nth-of-type(13) {
-  animation-delay: 1.2s;
+  animation-delay: 0.7s;
 }
 .animatedLine p:nth-of-type(14) {
-  animation-delay: 1.3s;
+  animation-delay: 0.6s;
 }
 .animatedLine p:nth-of-type(15) {
-  animation-delay: 1.4s;
+  animation-delay: 0.5s;
 }
 .animatedLine p:nth-of-type(16) {
-  animation-delay: 1.5s;
+  animation-delay: 0.4s;
 }
 .animatedLine p:nth-of-type(17) {
-  animation-delay: 1.6s;
+  animation-delay: 0.3s;
 }
 .animatedLine p:nth-of-type(18) {
-  animation-delay: 1.7s;
+  animation-delay: 0.2s;
 }
 .animatedLine p:nth-of-type(19) {
-  animation-delay: 1.8s;
+  animation-delay: 0.1s;
 }
 .animatedLine p:nth-of-type(20) {
-  animation-delay: 1.9s;
+  animation-delay: 0s;
 }
 
 @keyframes animatedLine {
@@ -301,6 +305,21 @@ img {
   margin: 20px;
   text-align: center;
   transition: 0.5s;
+}
+
+.fullstack {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.fullstack p:nth-of-type(1) {
+  color: rgb(rgba(187, 44, 44, 0.76));
+  background: rgb(rgba(187, 44, 44, 0.76));
+  margin-right: 2px;
+}
+
+.skillspercentage ul li {
+  list-style: none;
 }
 
 .services .content .stackBx {
@@ -452,6 +471,14 @@ img {
   pointer-events: auto;
   opacity: 1;
 }
+.popup2 {
+  pointer-events: auto;
+  opacity: 1;
+}
+.popup3 {
+  pointer-events: auto;
+  opacity: 1;
+}
 
 .modal {
   background-color: hsl(323 21% 16%);
@@ -463,6 +490,35 @@ img {
   border-radius: 5px;
   box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
   text-align: center;
+}
+
+.modal2 {
+  max-width: 600px;
+  max-height: 600px;
+  background-color: #222;
+  border: 2px solid #444;
+  padding: 30px 50px;
+}
+
+.modal3 {
+  max-width: 600px;
+  max-height: 600px;
+  background-color: #f7f7f7;
+  border: 2xp solid #222;
+  padding: 30px 50px;
+}
+
+.workBx2 {
+  position: fixed;
+  height: 400px;
+  width: 400px;
+  background-color: #222;
+  transition: 1s;
+  opacity: 0;
+  z-index: 999;
+}
+.workBx2.active {
+  opacity: 1;
 }
 .testimonial {
   background: #f7f7f7;
@@ -511,6 +567,7 @@ img {
 
 .contact {
   background: #111;
+  min-height: calc(100vh - 43.4px);
 }
 
 .formBx {
@@ -591,7 +648,16 @@ img {
   flex-direction: column;
   font-weight: 300;
 }
-
+.text a {
+  text-decoration: underline;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.5s;
+}
+.text a:hover {
+  color: #2196f3;
+  transition: 0.5s;
+}
 .contactInfoBx .box .text h3 {
   font-weight: 500;
   color: #2196f3;

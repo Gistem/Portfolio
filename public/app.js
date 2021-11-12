@@ -1,3 +1,4 @@
+//Menu
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
@@ -8,6 +9,10 @@ function toggleMenu() {
   menuToggle.classList.toggle("active");
   menu.classList.toggle("active");
 }
+
+//Work pop ups
+//Plantear solo una clase y variar la Id, entonces a la hora de seleccionar con que modal trabajar usamos el Id que se va a abrir
+///////////
 const open = document.getElementById("open");
 const modal = document.getElementById("modal");
 const close = document.getElementById("close");
@@ -19,7 +24,32 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
   modal.classList.remove("popup");
 });
+//////////////
+const open2 = document.getElementById("open2");
+const modal2 = document.getElementById("modal2");
+const close2 = document.getElementById("close2");
 
+open2.addEventListener("click", () => {
+  modal2.classList.add("popup2");
+});
+
+close2.addEventListener("click", () => {
+  modal2.classList.remove("popup2");
+});
+
+///////////////
+const open3 = document.getElementById("open3");
+const modal3 = document.getElementById("modal3");
+const close3 = document.getElementById("close3");
+
+open3.addEventListener("click", () => {
+  modal3.classList.add("popup3");
+});
+
+close3.addEventListener("click", () => {
+  modal3.classList.remove("popup3");
+});
+//Form
 const contactForm = document.querySelector(".contact-form");
 let fullname = document.getElementById("name");
 let email = document.getElementById("email");
