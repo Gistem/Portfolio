@@ -692,6 +692,16 @@ img {
   color: #2196f3;
   transition: 0.5s;
 }
+.CV {
+  text-decoration: underline;
+  font-size: 16px;
+  color: #2196f3;
+  transition: 0.5s;
+}
+.CV:hover {
+  color: #fff;
+  transition: 0.5s;
+}
 .contactInfoBx .box .text h3 {
   font-weight: 500;
   color: #2196f3;
