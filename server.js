@@ -3,9 +3,9 @@ const app = express();
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-const { EMAIL, PASSWORD } = process.env;
+const { EMAIL, PASSWORD, PORT } = process.env;
 
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 
 app.use(express.static("public"));
 app.use(express.json());
