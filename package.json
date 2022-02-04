@@ -6,9 +6,7 @@
   "directories": {
     "doc": "docs"
   },
-  "engines": {
-    "node":"14.x"
-  },
+
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
