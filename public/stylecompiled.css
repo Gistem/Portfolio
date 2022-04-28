@@ -15,7 +15,7 @@ section {
 .banner {
   position: relative;
   min-height: 100vh;
-  background: url(images/snow.jpg);
+  background: url(images/snow.jpeg);
   background-size: cover;
   background-position: right;
   display: flex;
